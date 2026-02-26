@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../workshop-01.FronEnd/workshop-01.FronEnd/workshop-01.FronEnd.csproj" Id="b391fce9-8e06-43e0-a734-74cec220a50e" />
+  <Project Path="workshop-01.Backend/workshop-01.Backend.csproj" />
+</Solution>
