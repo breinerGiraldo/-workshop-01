@@ -95,6 +95,7 @@
             {
                 throw new ArgumentException($"Millisecond: {MilliSecond} is not valid.");
             }
+
             int hora12= Hour;
                 string period;
 
@@ -242,7 +243,7 @@
         {
             if (second < 0 || second > 59)
             {
-                throw new ArgumentOutOfRangeException(nameof(second), $"Second:{second} is not valid .");
+                throw new ArgumentException($"Second:{second} is not valid .");
             }
             return second;
         }
@@ -251,7 +252,7 @@
         {
             if (milisecond < 0 || milisecond > 999)
             {
-                throw new ArgumentOutOfRangeException(nameof(milisecond), $"Milisecond : {milisecond} is not valid.");
+                throw new ArgumentException ($"Milisecond : {milisecond} is not valid.");
             }
             return milisecond;
         }
