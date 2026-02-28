@@ -72,27 +72,29 @@
             get => _millisecond;
             set => _millisecond = ValidMilisecond(value);
         }
+
         override public string ToString()
         {
 
             if (Hour < 0 || Hour > 23)
             {
-                throw new ArgumentOutOfRangeException(nameof(Hour), $"Milisecond : {Hour} is not valid.");
+                throw new ArgumentException($"Hour: {Hour} is not valid.");
             }
+
             if (Minute < 0 || Minute > 59)
             {
-                throw new ArgumentOutOfRangeException(nameof(Minute), $"Milisecond : {Minute} is not valid.");
+                throw new ArgumentException($"Minute: {Minute} is not valid.");
             }
+
             if (Second < 0 || Second > 59)
             {
-                throw new ArgumentOutOfRangeException(nameof(Second), $"Milisecond : {Second} is not valid.");
+                throw new ArgumentException($"Second: {Second} is not valid.");
             }
+
             if (MilliSecond < 0 || MilliSecond > 999)
-
             {
-                throw new ArgumentOutOfRangeException(nameof(MilliSecond), $"Milisecond : {MilliSecond} is not valid.");
+                throw new ArgumentException($"Millisecond: {MilliSecond} is not valid.");
             }
-
             int hora12= Hour;
                 string period;
 
@@ -222,7 +224,7 @@
         {
             if (hour < 0 || hour > 23)
             {
-                throw new ArgumentOutOfRangeException(nameof(hour), $"Hour: {hour} is not valid.");
+                throw new ArgumentException($"Hour: {hour} is not valid.");
             }
             return hour;
         }
@@ -231,7 +233,7 @@
         {
             if (minute < 0 || minute > 59)
             {
-                throw new ArgumentOutOfRangeException(nameof(minute), $"Minute:{minute}is not valid");
+                throw new ArgumentException($"Minute:{minute}is not valid");
             }
             return minute;
         }
